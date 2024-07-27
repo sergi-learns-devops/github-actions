@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-latest #The runner image I want to use for my GitHub Actions workflow.
     steps:
       - name: Print greeting #Name of the first step
-        run: echo "Hello World!"
+        run: | #The pipe symbol allows to execute multi-line commands
+            echo "Hello World!"
+            echo "Hello to my first GitHub Action!"
       - name: Print goodbye
         run: echo "Done - bye!"
