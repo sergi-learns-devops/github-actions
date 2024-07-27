@@ -1,0 +1,10 @@
+name: First Workflow
+on: workflow_dispatch #Manual trigger for the workflow. The user manually starts the workflow.
+jobs:
+  first-job:
+    runs-on: ubuntu-latest #The runner image I want to use for my GitHub Actions workflow.
+    steps:
+      - name: Print greeting #Name of the first step
+        run: echo "Hello World!"
+      - name: Print goodbye
+        run: echo "Done - bye!"
