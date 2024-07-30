@@ -1,0 +1,12 @@
+name: Output information
+on: workflow_dispatch
+jobs:
+  info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output GitHub context
+        run: echo "${{ toJSON(github) }}" #I can use context to get information from my GitHub Action.
+                                          #This is a way to access information about workflow, variables, runner environments, jobs and steps.
+                                          #Reference: https://docs.github.com/en/actions/learn-github-actions/contexts
+                                          #Also, I can use expressions to programmatically set environment variables in workflow files and access contexts.
+                                          #Reference: https://docs.github.com/en/actions/learn-github-actions/expressions

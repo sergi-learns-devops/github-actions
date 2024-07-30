@@ -1,10 +1,11 @@
 name: First Workflow
-on: workflow_dispatch #Manual trigger for the workflow. The user manually starts the workflow.
-                      #Most populars triggers are:
-                      #push, pull_request, create, fork, issues, issue_comment, watch, discussion & many more.
-                      #Others can be:
-                      #workflow_dispatch, repository_dispatch, schedule & workflow_call.
-                      #GitHub Actions events available: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
+on: [push,workflow_dispatch] #Manual trigger for the workflow. The user manually starts the workflow.
+                             #I can add multiple events as triggers (between brackets "[]"). In this way, I can run my Action automatically or manually.
+                             #Most populars triggers are:
+                             #push, pull_request, create, fork, issues, issue_comment, watch, discussion & many more.
+                             #Others can be:
+                             #workflow_dispatch, repository_dispatch, schedule & workflow_call.
+                             #GitHub Actions events available: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
 jobs:
   first-job:
     runs-on: ubuntu-latest #The runner image I want to use for my GitHub Actions workflow.
