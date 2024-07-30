@@ -15,3 +15,15 @@ jobs:
             echo "Hello to my first GitHub Action!"
       - name: Print goodbye
         run: echo "Done - bye!"
+  #Add a new job in my workflow
+  second-job:
+    needs: first-job #When the "first-job" finishes, it starts the "second-job"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting II
+        run:
+            echo "This is my second job via GitHub Actions!"
+      - name: Print greeting III
+        run:
+            echo "This is a second step in my seconds job!"
+  #By default, multiple jobs runs in parallel. There 2 types of running: parallel or sequential.
