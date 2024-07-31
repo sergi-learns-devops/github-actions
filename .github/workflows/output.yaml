@@ -11,4 +11,4 @@ jobs:
                                           #Also, I can use expressions to programmatically set environment variables in workflow files and access contexts.
                                           #Reference: https://docs.github.com/en/actions/learn-github-actions/expressions
       - name: Job status
-        run: echo "{{ jobs.info.status }}"
+        run: echo "${{ toJSON(job) }}"
